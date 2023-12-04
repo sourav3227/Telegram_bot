@@ -61,28 +61,5 @@ electronic_summary_handler = telegram.ext.CommandHandler(
 dispatcher.add_handler(electronic_summary_handler)
 
 
-# For Commands
-def fnc1(update, context):
-  bot.send_message(
-    chat_id=update.effective_chat.id,
-    text="Welcome to the www.praveensingampalli.com ",
-  )
-
-
-start_value2 = telegram.ext.CommandHandler('start', fnc1)
-dispatcher.add_handler(start_value2)
-
-
-#adding more Command
-def fnc2(update, context):
-  bot.send_message(
-    chat_id=update.effective_chat.id,
-    text="tutorial link: wwww.youtube.com/praveensingampalli ",
-  )
-
-
-start_value = telegram.ext.CommandHandler('youtube', fnc2)
-dispatcher.add_handler(start_value)
-
 updater.start_polling()
 updater.idle()
